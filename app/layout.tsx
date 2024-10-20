@@ -15,9 +15,9 @@ const inter = Inter({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900' ],
   variable: '--font-inter',
 })
-const Space_Grotesk = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900' ],
+  weight: ['300', '400', '500', '600', '700'],
   variable: '--font-spaceGrotesk',
 })
 
@@ -36,9 +36,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+    appearance={{
+      elements: {
+        formButtonPrimary: 'primary-gradient',
+        footerActionLink:
+        'primary-text-gradient hover:text-primary-500',
+        
+      }
+    }}>
       <html lang="en">
-        <body className={``}>
+        <body className={`${inter.variable} ${spaceGrotesk.variable}` }>
+          
           <SignedOut>
             <SignInButton />
           </SignedOut>
@@ -46,6 +55,7 @@ export default function RootLayout({
             <UserButton />
           </SignedIn>
           {children}
+          <h1>hello vai</h1>
         </body>
       </html>
     </ClerkProvider>
