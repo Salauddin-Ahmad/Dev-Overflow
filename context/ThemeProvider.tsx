@@ -8,7 +8,13 @@ export fucntion ThemeProvider({children}: {
 
     const [mode, setMode] = useState('');
    
-   const handleThemeChange = () => {}
+   const handleThemeChange = () => {
+    if(mode === 'dark') {
+        setMode('light')
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.add('dark');
+    }
+   }
     return (
         <ThemeContext.Provider value={{ mode, setMode }}>
             {children}
