@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 
 import { Inter, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeProvider";
-import CC from "@/component/CC";
+
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -55,7 +55,7 @@ export default function RootLayout({
             <SignedIn>
               <UserButton afterSignOutUrl="/" />
             </SignedIn>
-            <CC></CC>
+          
             {children}
           </ThemeProvider>
         </ClerkProvider>
