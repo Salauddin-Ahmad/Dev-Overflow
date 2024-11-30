@@ -1,7 +1,9 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import Theme from "./Theme";
 
 const Navbar = () => {
   return (
@@ -23,9 +25,9 @@ const Navbar = () => {
 
       {/* Right Section: Authenticated and Unauthenticated States */}
       <div className="flex items-center gap-4">
-        Theme
+       
 
-
+      <Theme/>
         MobileNav
         {/* When Signed In */}
         <SignedIn>
