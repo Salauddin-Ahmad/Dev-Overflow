@@ -1,9 +1,5 @@
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
 } from "@clerk/nextjs";
 import "./globals.css";
 import React from "react";
@@ -49,13 +45,7 @@ export default function RootLayout({
           }}
         >
           <ThemeProvider>
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton afterSignOutUrl="/" />
-            </SignedIn>
-          
+
             {children}
           </ThemeProvider>
         </ClerkProvider>
