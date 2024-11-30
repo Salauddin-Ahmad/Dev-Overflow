@@ -12,6 +12,12 @@ body {
   }
 }
 
+.flex-between {
+  @apply flex
+  justify-between
+  items-center;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
